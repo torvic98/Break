@@ -3,9 +3,11 @@ python:
 - 2.7
 - 3.5
 - 3.6
+
 install:
 - pip install -r requirements/dev.txt
 - pip install codecov
+
 script:
 - coverage erase
 - coverage run web/test_app.py && coverage html
@@ -22,3 +24,5 @@ deploy:
     api_key:
       secure: oMJYxwdMyb3hBRRji1/uBqXWPFzA/TYEXbN1d0w9SUR+tY0tecacjHZDuqIgeR9fJGP8cXOi633t8Y+/WUsY1OdP/ykmsIbNfEUoB1ajuoL+nYTpLMPTm60omfUaZJMZIsnMxxnnehWFl1oshR7Z+Mr6/XdVrSzyKrOTqcmqewnhxBvL9wSLqAd5FFu7PbfLOaxXjPE/QUEkLxraMD3JALbOqBMuSiIIan+YeUGKP8B/AyI/BRKlfg+CoiC3KoFl+S3MdEir7DRBM7uM4GQypFay5OvteRWs2lAGtmvURU+ccW5RfLgRxTtIZswC3zqdYfAqrn9XROvxTZD1K19YQiNteN+PYvzqOF8i/H8wl0FGm8Y9F6+mppPr+SgKY/XB7waBxaQ3kG4cFTUBZP7fgHDVAZvFUsQh2t2+O1UQhm/ulORPRqX1LdXHJvRs5IXuCNSfJKTqmg74KmsxW4WWDaX2JASKn30Xl4B49ZUCpYHva/PMXlkMOcSOMhevQnbESd0LgrFYZjIXk9NuKqrJkHFGg7INgZKikz7wF1eJSlz3F2j2mWwjX8rrXPWxEU+0UlkSgfx+KP9Ku8dAMbTLjUsq6hvR3ZOLktm8UWmCgF0Og0TJ7c2OWN+Vy8KC0A5yeafu1rlcGvvVJHNeCLrniJLj+V7CGoTsdaSy7rLBQhA=
     app: allen-selit
+    on:
+      python: 3.6
